@@ -4,6 +4,8 @@ import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.system.ErrnoException;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import static android.system.Os.setenv;
@@ -15,9 +17,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-    // Example of a call to a native method
-    TextView tv = (TextView) findViewById(R.id.sample_text);
-    tv.setText(stringFromJNI());
+
+        // Example of a call to a native method
+        final TextView tv = (TextView) findViewById(R.id.sample_text);
+        Button button = findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                tv.setText(stringFromJNI());
+            }
+        });
     }
 
     /**
@@ -59,10 +68,10 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     System.loadLibrary(cpp);
                     setenv("LD_PRELOAD", asan + " " + cpp, true);
-                } catch(UnsatisfiedLinkError e) {
+                } catch (UnsatisfiedLinkError e) {
                     setenv("LD_PRELOAD", asan, true);
                 }
-                setenv("ASAN_OPTIONS","log_to_syslog=false,allow_user_segv_handler=1", true);
+                setenv("ASAN_OPTIONS", "log_to_syslog=false,allow_user_segv_handler=1", true);
                 return;
             } catch (UnsatisfiedLinkError | ErrnoException e) {
                 e.printStackTrace();
