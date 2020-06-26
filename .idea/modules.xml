@@ -8,6 +8,8 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/StudioProjects-ExampleASAN-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/StudioProjects-ExampleASAN-app.iml" group="ExampleASAN/app" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/nin-StudioProjects-ExampleASAN.iml" filepath="$PROJECT_DIR$/.idea/modules/nin-StudioProjects-ExampleASAN.iml" group="ExampleASAN" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/src-ExampleASAN.iml" filepath="$PROJECT_DIR$/.idea/modules/src-ExampleASAN.iml" group="ExampleASAN" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/src-ExampleASAN-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/src-ExampleASAN-app.iml" group="ExampleASAN/app" />
     </modules>
   </component>
 </project>
