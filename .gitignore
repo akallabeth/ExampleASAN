@@ -7,4 +7,5 @@
 /build
 /captures
 .externalNativeBuild
+app/.cxx
 app/src/main/jniLibs/*
